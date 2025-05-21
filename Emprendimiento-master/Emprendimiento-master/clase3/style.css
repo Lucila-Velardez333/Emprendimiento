@@ -1,114 +1,136 @@
+h1,h2,h3{
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+ }
 
-header{
-    position: relative; /*no permite que  se posicione encima lo que no este dentro del header*/
-    width: 100%;
-    height: 30%;
-}
-.fondo-header{
-    position: absolute; /*permite que se posicione lo que este dentro del header*/
-    width: 100%; 
-    height: 150%;
-    object-fit: cover;
-    z-index: 0; /*pasa a estar al fondo del que tenga 1*/
-}
-.menu-header {
-    position: relative;
-    z-index: 1;
-    color: rgb(0, 0, 0);
-    text-align: right;
-    padding: 20px;
-}
-
-.menu-header-boton{
-    position: absolute;
-    z-index: 1;
-    color: rgb(0, 0, 0);
-    text-align: right;
-
-}
-
-button {
-    position: relative;
-    background-position: center;
-    z-index: 0;
-
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 50px;
-    border: none;
-    background: rgb(255, 252, 252,0.1);
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    
-}
-button::before {
-    margin-left: auto;
-}
+li,p {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
   
-button::after, button::before {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    transition: 0.5s;
-    position: absolute;
-}
-button:hover::after, button:hover::before {
-    width: 100%;
-}
-.contenedor-boton{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    
-}
-
-
-
-main{
-    margin: 100px;
-    border: 10px;
-    padding: 20px;
-    height: 50%;
-    text-align: center;
+.header{
+    padding: 5px;
+    width: 100vw;
+    height: 26vh;
+    background-color: rgb(197, 155, 195);
     position: relative;
 }
 
-form {
+.logoDiv{
+    width: 100vw;
+    height: 25vh;
+    background-image: url("../img/logo1-removebg-preview.png");
+    background-size: contain;
+    background-repeat: no-repeat;   
     background-position: center;
-}
-a{/*por default*/   
-    color: black;
-    text-decoration: none;/*le sacamos la linea que contiene el enlace*/
+    position: absolute;
 
+ }
+.nav{
+    position: absolute;
 }
-a:visited{/*por cuando ya lo visite*/
-    color: rgb(39, 39, 255);
+.tituloLogo{
+    width: 100vw;
+    height: 28vh;
+    position: absolute;
+    text-align: center;    
 }
-a:hover{/*cuando me poso encima del enlace*/
-    color: rgb(182, 183, 255);
-}
-a:active{/*por cuando hago click*/
-    color: aquamarine;
+
+.containerFlex {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
     
+ }
+main{
+    width: 100vw;
+    height: 80vh;
+    margin: 10px;
 }
-li{
-    list-style: none; /*aca se sacamos la viñeta a los items*/
-
-}
-
-
-
-
-
-
-
-footer {
-    position: relative;
-    background-color: blanchedalmond;
+.sticky{
+    position: sticky;
+    margin: 2px;
     text-align: center;
+    width: 18vw;
+    height: 8vh;
+    top: 0; /*para que quede fijo el sticky*/
+    padding: 2px; /*para que mantenga distancia fija el sticky con la lista items*/
+    background-color: rgb(250, 250, 250,0.9);
+} 
+.articulos {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    
+ }
+
+.article {
+    width: 20vw;
+    height: 50vh;
+    background-position: center;
+    border-style: groove;
+    overflow: auto;
+    align-content: normal;
+    margin: 8px;
+ }
+.listaItems{
+    height: 50vh;
+    width: 20vw;
 }
+h1{
+    text-align: center;
+ }
+
+li:hover img{
+    display: block;
+
+ }
+img{
+    display: none;
+    width: 15vw;
+    height: 30vh;
+ }
+.menu:hover ul{
+    display: block;
+
+}
+i ul{
+    display: none;
+}
+
+.contacto{
+    position: absolute;
+    width: 100vw;
+    height: 25vh ;
+    text-align: center;
+    /* background-color: blueviolet; */
+}
+.footer {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    width: 100vw;
+    height: 25vh;
+    background-color: rgb(180, 180, 233);
+    align-content: end;
+ }
+.mapa{
+    position: absolute;
+    width: 95vw;
+    height: 25vh;
+    padding: 10px;
+    /* background-color: brown; */
+    text-align: right;
+ }
+
 
 
