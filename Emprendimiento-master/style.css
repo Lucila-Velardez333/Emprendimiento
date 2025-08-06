@@ -1,104 +1,111 @@
+body{
+    width: 100vw;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
 h1,h2,h3{
   font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-weight: weight;
+  /* font-optical-sizing: auto;
+  font-weight: weight; */
   font-style: normal;
- }
+  text-align: center;
+}
 
 li,p {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-  }
+}
   
 .header{
     padding: 5px;
     width: 100vw;
     height: 26vh;
-    background-color: rgb(197, 155, 195);
     position: relative;
+    background-image:  url(./img/fondo.avif);
+    background-repeat: no-repeat; 
+    background-size: cover;
 }
 
 .logoDiv{
+    background-image: url("./img/logo1-removebg-preview.png");
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    background-position: center;
     width: 100vw;
     height: 25vh;
-    background-image: url("../img/logo1-removebg-preview.png");
-    background-size: contain;
-    background-repeat: no-repeat;   
-    background-position: center;
     position: absolute;
 
- }
+}
+
 .nav{
     position: absolute;
 }
-.tituloLogo{
-    width: 100vw;
-    height: 28vh;
-    position: absolute;
-    text-align: center;    
-}
 
-.containerFlex {
+
+main{
+    margin-top: 1px;
     width: 100vw;
-    height: 50vh;
+    height: 200vh;
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     
- }
-main{
-    width: 100vw;
-    height: 80vh;
-    margin: 10px;
 }
 .sticky{
-    position: sticky;
-    margin: 2px;
-    text-align: center;
-    width: 18vw;
-    height: 8vh;
-    top: 0; /*para que quede fijo el sticky*/
-    padding: 2px; /*para que mantenga distancia fija el sticky con la lista items*/
-    background-color: rgb(250, 250, 250,0.9);
-} 
-.articulos {
+    margin: 1px;
+    background-color: rgb(177, 3, 119);
+}  
+.containerArticulos {
+    padding: 2px;
+    margin-top: 1px;
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 10px;
-    
- }
-
-.article {
-    width: 20vw;
     height: 50vh;
     background-position: center;
-    border-style: groove;
-    overflow: auto;
-    align-content: normal;
-    margin: 8px;
- }
-.listaItems{
-    height: 50vh;
-    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+    
 }
+.listaItems{
+    padding: 1px;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    flex-flow: row wrap ; 
+    justify-content: center; 
+    align-items: center ;
+    
+} 
+.article {
+    margin: 2px;
+    padding: 10px;
+    width: 15vw;
+    height: 40vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    overflow: visible;
+    background-color: rgb(150, 122, 150);
+    border-radius: 15px;
+    min-width: 100px;
+    
+}
+
 h1{
     text-align: center;
- }
+    color: rgb(0, 0, 0);
+}
 
-li:hover img{
-    display: block;
-
- }
 img{
-    display: none;
-    width: 15vw;
-    height: 30vh;
- }
+    border-radius: 10px;
+    width: 10vw;
+}
 .menu:hover ul{
     display: block;
 
@@ -107,30 +114,80 @@ i ul{
     display: none;
 }
 
-.contacto{
-    position: absolute;
-    width: 100vw;
+.item{
+    width: 20vw;
     height: 25vh ;
-    text-align: center;
-    /* background-color: blueviolet; */
 }
 .footer {
-    position: relative;
-    margin-top: 10px;
-    display: flex;
+    margin-top: 1px;
     width: 100vw;
-    height: 25vh;
-    background-color: rgb(180, 180, 233);
-    align-content: end;
- }
-.mapa{
-    position: absolute;
-    width: 95vw;
-    height: 25vh;
-    padding: 10px;
-    /* background-color: brown; */
-    text-align: right;
- }
+    height: 40vh;
+    background-image:  url(./img/fondo.avif);
+    background-repeat:  no-repeat; 
+    background-size: cover;  
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around
+}
 
 
+@media (max-width:768px){
+    body{
+        width: 50vw;
+    }
+
+    .header{
+        padding-left: 10px;
+        width: 88vw;
+        height: 26vh;
+        background-color: rgb(197, 155, 195);
+        position: relative;
+    }
+    main{
+        width: 88vw;
+        height: 80vh;
+        background-position: center;
+        background-color: antiquewhite;
+    }
+    .article {
+        width: auto;
+        height: 30vh;
+        background-position: center;
+        border-style: groove;
+        overflow: auto;
+        align-content: normal;
+       
+    }
+    img{
+        float: right;
+      
+    }
+    .containerFlex {
+        width: 88vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        background-position: center;
+        
+    }
+    .footer {
+        position: relative;
+        margin-top: 20px;
+        display: flex;
+        width: 88vw;
+        height: 25vh;
+        padding: 10px;
+        background-color: rgb(180, 180, 233);
+        align-content: end;
+    }
+    .mapa{
+        position: absolute;
+        width: 75vw;
+        height: 25vh;
+        padding: 10px;
+        text-align: right;
+    }
+}
 
